@@ -60,5 +60,9 @@ form.addEventListener('submit',(e)=>{
 });
 }
 
+else{
+  userList.innerHTML = 'No users found';
+}
+})
 
 });    
