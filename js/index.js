@@ -64,5 +64,9 @@ else{
   userList.innerHTML = 'No users found';
 }
 })
-
-});    
+.catch(error => {
+  console.error('Error:' ,error);
+  userList.innerHTML = "Error occurred while fetching users."  
+   }); 
+ });
+});     
