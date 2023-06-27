@@ -27,9 +27,12 @@ form.addEventListener('submit',(e)=>{
     
           let link=document.createElement('a')
           link.href= user.html_url;
-          link.textContent = 'View Profile';
-      
+          link.textContent = 'link to Profile';
 
+          //Add event listener to display repos for the selected user
+      h5.addEventListener('click',()=> {
+      
+      });
   });
 
 
