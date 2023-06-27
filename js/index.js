@@ -54,6 +54,11 @@ form.addEventListener('submit',(e)=>{
         repoList.innerHTML = 'Error occurred while fetching repositories.';
     });
   });
+  userList.appendChild(h5);
+  userList.appendChild(img);
+  userList.appendChild(link);
+});
+}
 
 
 });    
