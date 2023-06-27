@@ -16,6 +16,20 @@ form.addEventListener('submit',(e)=>{
     .then(data => {
       userList.innerHTML = ''; //clear previous data of the user
 
+      if(data.items && data.items.length > 0){
+        data.items.forEach(user => {
+  
+          let h5=document.createElement('h5')  
+          h5.textContent=user.login;
+    
+          let img=document.createElement('img')  
+          img.src=user.avatar_url
+    
+          let link=document.createElement('a')
+          link.href= user.html_url;
+          link.textContent = 'View Profile';
+      
+
   });
 
 
