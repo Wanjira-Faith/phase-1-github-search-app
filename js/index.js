@@ -32,7 +32,7 @@ form.addEventListener('submit',(e)=>{
           //Add event listener to display repos for the selected user
       h5.addEventListener('click',()=> {
 
-        
+
         //make a fetch request with the returned value
         //display the returned results on the DOM
         fetch(`https://api.github.com/users/${user.login}/repos`,{
@@ -47,9 +47,12 @@ form.addEventListener('submit',(e)=>{
                 let repository=document.createElement('li');
                 repository.innerText=`${repo.name}`
                 repoList.appendChild(repository);
-            });     
-      
-      });
+            });    
+      })
+      .catch(error => {
+        console.error('Error:',error);
+        repoList.innerHTML = 'Error occurred while fetching repositories.';
+    });
   });
 
 
