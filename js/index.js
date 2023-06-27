@@ -24,6 +24,7 @@ form.addEventListener('submit',(e)=>{
     
           let img=document.createElement('img')  
           img.src=user.avatar_url
+          img.width=150;
     
           let link=document.createElement('a')
           link.href= user.html_url;
